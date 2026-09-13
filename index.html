@@ -93,31 +93,16 @@
         </div>
       </div>
       <div class="cover-visual reveal" style="--d:4">
-        <svg class="community-illustration" viewBox="0 0 400 400" role="img" aria-label="Ilustración animada de una comunidad reunida en círculo, símbolo de encuentro y apoyo mutuo">
-          <defs>
-            <radialGradient id="illoGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="var(--terracotta)" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="var(--terracotta)" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <circle class="illo-glow" cx="200" cy="200" r="175" fill="url(#illoGlow)"/>
-          <circle class="illo-orbit" cx="200" cy="200" r="150" fill="none" stroke="var(--line-strong)" stroke-width="1.5" stroke-dasharray="2 11"/>
-          <g class="illo-figures">
-            <g transform="rotate(0 200 200) translate(200 50)"><g class="illo-figure" style="--i:0"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-            <g transform="rotate(45 200 200) translate(200 50)"><g class="illo-figure" style="--i:1"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-            <g transform="rotate(90 200 200) translate(200 50)"><g class="illo-figure" style="--i:2"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-            <g transform="rotate(135 200 200) translate(200 50)"><g class="illo-figure" style="--i:3"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-            <g transform="rotate(180 200 200) translate(200 50)"><g class="illo-figure" style="--i:4"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-            <g transform="rotate(225 200 200) translate(200 50)"><g class="illo-figure" style="--i:5"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-            <g transform="rotate(270 200 200) translate(200 50)"><g class="illo-figure" style="--i:6"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-            <g transform="rotate(315 200 200) translate(200 50)"><g class="illo-figure" style="--i:7"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
-          </g>
-          <g class="illo-center-icon">
-            <path d="M180 214 L180 194 L200 178 L220 194 L220 214 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
-            <line x1="200" y1="178" x2="200" y2="168" stroke="var(--ink)" stroke-width="2"/>
-            <line x1="195" y1="172" x2="205" y2="172" stroke="var(--ink)" stroke-width="2"/>
-          </g>
-        </svg>
+        <div class="cube-scene">
+          <div class="cube">
+            <div class="cube-face cube-face--front">Encuentro</div>
+            <div class="cube-face cube-face--back">Bienestar</div>
+            <div class="cube-face cube-face--right">Participación</div>
+            <div class="cube-face cube-face--left">Comunidad</div>
+            <div class="cube-face cube-face--top">Redes de apoyo</div>
+            <div class="cube-face cube-face--bottom">Familia</div>
+          </div>
+        </div>
         <p class="illo-caption">Encuentro &middot; participación &middot; redes de apoyo</p>
       </div>
     </div>
@@ -172,7 +157,11 @@
           <div class="flow-arrow"></div>
           <div class="flow-node">Enlace de comunidades cristianas</div>
           <div class="flow-arrow"></div>
-          <div class="flow-node flow-node--end">Contacto ordenado con las 3 sedes</div>
+          <div class="flow-sedes">
+            <span class="flow-sede-chip" style="--c:var(--terracotta)">SP</span>
+            <span class="flow-sede-chip" style="--c:var(--teal)">PL</span>
+            <span class="flow-sede-chip" style="--c:var(--gold)">SB</span>
+          </div>
         </div>
       </div>
     </div>
