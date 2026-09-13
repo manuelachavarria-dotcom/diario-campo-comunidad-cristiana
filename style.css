@@ -352,6 +352,18 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 .network-diagram{ width:min(220px,60%); height:auto; margin:0 auto; display:block; }
 .net-center circle{ fill:var(--teal); }
 .net-center text{ fill:var(--cream-ink); font-size:.95rem; font-weight:600; text-anchor:middle; font-family:var(--font-body); }
+.net-endpoints circle{
+  stroke:var(--paper); stroke-width:2;
+  animation:endpoint-pulse 3.6s ease-in-out infinite;
+  transform-box:fill-box; transform-origin:center;
+}
+.net-endpoints circle:nth-child(3n+1){ fill:var(--terracotta); }
+.net-endpoints circle:nth-child(3n+2){ fill:var(--teal); animation-delay:.4s; }
+.net-endpoints circle:nth-child(3n){ fill:var(--gold); animation-delay:.8s; }
+@keyframes endpoint-pulse{
+  0%,100%{ transform:scale(1); }
+  50%{ transform:scale(1.22); }
+}
 .net-links line{ stroke-dasharray:6 8; animation:net-flow 3.2s linear infinite; animation-play-state:paused; }
 .slide.is-active .net-links line{ animation-play-state:running; }
 @keyframes net-flow{ 0%{ stroke-dashoffset:0; } 100%{ stroke-dashoffset:-44; } }
