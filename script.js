@@ -211,7 +211,7 @@
       node.classList.add('is-selected');
       if (netCaptionText && netNotes[key]) {
         netCaptionText.textContent = netNotes[key];
-        if (netCaptionLabel) netCaptionLabel.textContent = node.querySelector('text').textContent;
+        if (netCaptionLabel) { var lbl = node.querySelector('text'); netCaptionLabel.textContent = lbl ? lbl.textContent : node.textContent; }
       }
     });
   });

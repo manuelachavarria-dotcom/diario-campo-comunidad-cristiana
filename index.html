@@ -93,17 +93,16 @@
         </div>
       </div>
       <div class="cover-visual reveal" style="--d:4">
-        <div class="cube-scene">
-          <div class="cube">
-            <div class="cube-face cube-face--front">Encuentro</div>
-            <div class="cube-face cube-face--back">Bienestar</div>
-            <div class="cube-face cube-face--right">Participación</div>
-            <div class="cube-face cube-face--left">Comunidad</div>
-            <div class="cube-face cube-face--top">Redes de apoyo</div>
-            <div class="cube-face cube-face--bottom">Familia</div>
+        <div class="ripple-scene" aria-hidden="true">
+          <div class="ripple-plane">
+            <div class="ripple-core"></div>
+            <div class="ripple-ring"></div>
+            <div class="ripple-ring"></div>
+            <div class="ripple-ring"></div>
+            <div class="ripple-ring"></div>
           </div>
         </div>
-        <p class="illo-caption">Encuentro &middot; participación &middot; redes de apoyo</p>
+        <p class="illo-caption">El apoyo comunitario se expande: de la familia a las redes que la rodean</p>
       </div>
     </div>
     <button class="scroll-cue reveal" data-goto="1" style="--d:6">Comenzar <span class="arrow-down">&#8595;</span></button>
@@ -385,29 +384,30 @@
         <p class="reveal" style="--d:4">Las iglesias construyen significados compartidos alrededor de la familia, el apoyo mutuo, los valores y el bienestar de niños, jóvenes y adultos.</p>
       </div>
       <div class="split-col split-col--visual">
-        <svg class="network-diagram reveal" style="--d:2" viewBox="0 0 420 420" role="img" aria-label="Red de apoyo alrededor de la iglesia">
-          <g class="net-links" fill="none" stroke="var(--line-strong)" stroke-width="1.4">
-            <line x1="210" y1="210" x2="210" y2="70"/>
-            <line x1="210" y1="210" x2="350" y2="150"/>
-            <line x1="210" y1="210" x2="350" y2="290"/>
-            <line x1="210" y1="210" x2="210" y2="360"/>
-            <line x1="210" y1="210" x2="70" y2="290"/>
-            <line x1="210" y1="210" x2="70" y2="150"/>
-          </g>
-          <g class="net-center">
-            <circle cx="210" cy="210" r="46"/>
-            <text x="210" y="216">Iglesia</text>
-          </g>
-          <g class="net-satellite" tabindex="0" role="button" data-note="jac" transform="translate(210,70)"><circle r="30"/><text y="5">JAC</text></g>
-          <g class="net-satellite" tabindex="0" role="button" data-note="alcaldia" transform="translate(350,150)"><circle r="30"/><text y="5">Alcaldía</text></g>
-          <g class="net-satellite" tabindex="0" role="button" data-note="pavida" transform="translate(350,290)"><circle r="30"/><text y="5">PAVIDA</text></g>
-          <g class="net-satellite" tabindex="0" role="button" data-note="familias" transform="translate(210,360)"><circle r="30"/><text y="5">Familias</text></g>
-          <g class="net-satellite" tabindex="0" role="button" data-note="ninez" transform="translate(70,290)"><circle r="30"/><text y="5">Niñez</text></g>
-          <g class="net-satellite" tabindex="0" role="button" data-note="lideres" transform="translate(70,150)"><circle r="30"/><text y="5">Líderes</text></g>
-        </svg>
-        <p class="diagram-hint">Toca un nodo para ver su rol en la red.</p>
+        <div class="badge-scene reveal" style="--d:2">
+          <div class="badge-3d">
+            <div class="badge-glow"></div>
+            <div class="handshake">
+              <div class="hs-arm hs-arm--left"></div>
+              <div class="hs-arm hs-arm--right"></div>
+              <div class="hs-clasp"></div>
+              <div class="hs-finger hs-finger--1"></div>
+              <div class="hs-finger hs-finger--2"></div>
+              <div class="hs-finger hs-finger--3"></div>
+            </div>
+          </div>
+        </div>
+        <p class="diagram-hint">Toca un actor para ver su rol en la red.</p>
+        <div class="mini-chip-row">
+          <button class="net-satellite" data-note="jac">JAC</button>
+          <button class="net-satellite" data-note="alcaldia">Alcaldía</button>
+          <button class="net-satellite" data-note="pavida">PAVIDA</button>
+          <button class="net-satellite" data-note="familias">Familias</button>
+          <button class="net-satellite" data-note="ninez">Niñez</button>
+          <button class="net-satellite" data-note="lideres">Líderes</button>
+        </div>
         <div class="net-caption" id="netCaption" aria-live="polite">
-          <span class="net-caption-label">Selecciona un nodo</span>
+          <span class="net-caption-label">Selecciona un actor</span>
           <p id="netCaptionText">La iglesia articula relaciones con actores externos y con su propia comunidad interna.</p>
         </div>
       </div>
@@ -447,8 +447,19 @@
         <p class="reveal" style="--d:3">Se observa una organización comunitaria basada en el trabajo conjunto con entidades externas, lo que amplía las posibilidades de intervención y el acceso a recursos compartidos.</p>
       </div>
       <div class="split-col split-col--visual">
-        <p class="diagram-hint">Toca un concepto para ver cómo se evidenció en el campo.</p>
-        <div class="concept-chips reveal" style="--d:2">
+        <div class="puzzle-scene reveal" style="--d:2">
+          <div class="puzzle-piece-wrap" style="--x:-42px; --y:-14px; --z:26px; --rot:-16deg; --delay:0s">
+            <svg viewBox="0 0 70 70"><rect x="5" y="5" width="60" height="60" rx="10" fill="var(--terracotta)"/><circle cx="35" cy="5" r="11" fill="var(--terracotta)"/><circle cx="65" cy="35" r="11" fill="var(--bg)"/></svg>
+          </div>
+          <div class="puzzle-piece-wrap" style="--x:38px; --y:-26px; --z:-12px; --rot:12deg; --delay:.5s">
+            <svg viewBox="0 0 70 70"><rect x="5" y="5" width="60" height="60" rx="10" fill="var(--teal)"/><circle cx="5" cy="35" r="11" fill="var(--bg)"/><circle cx="35" cy="65" r="11" fill="var(--teal)"/></svg>
+          </div>
+          <div class="puzzle-piece-wrap" style="--x:2px; --y:34px; --z:14px; --rot:-6deg; --delay:1s">
+            <svg viewBox="0 0 70 70"><rect x="5" y="5" width="60" height="60" rx="10" fill="var(--gold)"/><circle cx="65" cy="35" r="11" fill="var(--gold)"/><circle cx="35" cy="5" r="11" fill="var(--bg)"/></svg>
+          </div>
+        </div>
+        <p class="diagram-hint">Tres sedes, un mismo esfuerzo por encajar en la comunidad.</p>
+        <div class="concept-chips reveal" style="--d:3">
           <button class="chip" data-note="Espacios de participación activa que las tres iglesias generan en sus encuentros de oración, formación y actividades comunitarias.">Encuentro</button>
           <button class="chip" data-note="Formas diferenciadas de involucrarse según el grupo poblacional: niños, jóvenes, familias, parejas, mujeres, hombres y adultos mayores.">Participación</button>
           <button class="chip" data-note="Vínculos con la Junta de Acción Comunal, la Alcaldía de Itagüí y la Fundación PAVIDA que amplían el alcance de las iniciativas.">Redes de apoyo</button>
@@ -493,30 +504,6 @@
       </div>
     </div>
     <div class="speaker-notes">Cierren retomando las cuatro ideas fuerza. Si el tiempo lo permite, inviten a la reflexión sobre el rol que podría cumplir la Psicología Comunitaria acompañando estos procesos participativos.</div>
-  </section>
-
-  <!-- 14 · REFERENCIAS -->
-  <section class="slide slide--refs" id="s14" data-title="Referencias y créditos">
-    <div class="slide-inner layout-stack">
-      <div class="slide-head">
-        <span class="eyebrow reveal" style="--d:0">Cierre</span>
-        <h2 class="reveal" style="--d:1">Referencias y créditos</h2>
-      </div>
-      <div class="refs-block reveal" style="--d:2">
-        <h3>Fuente</h3>
-        <p>Diario de Campo &mdash; Comunidad Cristiana. Visitas de campo realizadas en Itagüí (sectores San Pío, Pilsen y Simón Bolívar), 2 y 7 de septiembre de 2026. Instrumento: ficha de caracterización aplicada por el grupo.</p>
-        <p class="refs-note">Nota metodológica: este diario de campo es un registro empírico de primera mano; no incorpora citas bibliográficas de autores en su texto original, por lo que esta presentación no atribuye conceptos de Psicología Comunitaria a teóricos específicos no mencionados en el documento fuente.</p>
-      </div>
-      <div class="refs-block reveal" style="--d:3">
-        <h3>Institución</h3>
-        <p>Universidad Católica Luis Amigó &mdash; Facultad de Ciencias Sociales, Salud y Bienestar &mdash; Programa de Psicología &mdash; Curso Psicología Comunitaria &mdash; Profesor Jorge Luis Muñoz.</p>
-      </div>
-      <div class="refs-block reveal" style="--d:4">
-        <h3>Equipo</h3>
-        <p>Carolina López López &middot; Sofía Vásquez &middot; Salome Rendón &middot; Manuela Chavarría Pérez &middot; María Paulina Castro Pérez.</p>
-      </div>
-    </div>
-    <div class="speaker-notes">Cierren agradeciendo al profesor y mencionando, si se pregunta, que las fuentes son las visitas de campo propias del grupo y no bibliografía externa.</div>
   </section>
 
 </main>
