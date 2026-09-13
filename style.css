@@ -357,30 +357,13 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
   max-width:none;
 }
 
-/* ---------- Handshake illustration (redes de apoyo) ---------- */
-.badge-scene{ width:100%; max-width:300px; margin:0 auto; }
-.badge-3d{
-  position:relative; width:100%; perspective:1200px;
-  animation:badge-tilt 8s ease-in-out infinite;
-}
-.badge-glow{
-  position:absolute; inset:10%; border-radius:50%; z-index:-1;
-  background:radial-gradient(circle, rgba(193,98,45,.24) 0%, rgba(193,98,45,0) 70%);
-  animation:illo-glow-pulse 4.5s ease-in-out infinite;
-}
-.handshake-illo{ width:100%; height:auto; display:block; filter:drop-shadow(0 20px 26px rgba(36,31,27,.22)); }
-.hs-hands{ transform-box:fill-box; transform-origin:center; animation:hs-shake 2.6s ease-in-out infinite; }
-.hs-sleeve{ transition:opacity .2s ease; }
-@keyframes badge-tilt{
-  0%,100%{ transform:rotateY(-10deg); }
-  50%{ transform:rotateY(10deg); }
-}
-@keyframes hs-shake{
-  0%,100%{ transform:rotate(0deg) translateY(0); }
-  25%{ transform:rotate(-3deg) translateY(2px); }
-  50%{ transform:rotate(0deg) translateY(0); }
-  75%{ transform:rotate(3deg) translateY(-2px); }
-}
+/* ---------- Network diagram (redes de apoyo) ---------- */
+.network-diagram{ width:min(220px,60%); height:auto; margin:0 auto; display:block; }
+.net-center circle{ fill:var(--teal); }
+.net-center text{ fill:var(--cream-ink); font-size:.95rem; font-weight:600; text-anchor:middle; font-family:var(--font-body); }
+.net-links line{ stroke-dasharray:6 8; animation:net-flow 3.2s linear infinite; animation-play-state:paused; }
+.slide.is-active .net-links line{ animation-play-state:running; }
+@keyframes net-flow{ 0%{ stroke-dashoffset:0; } 100%{ stroke-dashoffset:-44; } }
 .mini-chip-row{ display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; max-width:320px; margin:0 auto; }
 .mini-chip-row .net-satellite{
   font-family:var(--font-body); font-size:.78rem; font-weight:500; padding:.4rem .85rem; border-radius:100px;
@@ -389,23 +372,6 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 }
 .mini-chip-row .net-satellite:hover{ transform:translateY(-2px); border-color:var(--terracotta); }
 .mini-chip-row .net-satellite.is-selected{ background:var(--terracotta); color:var(--cream-ink); border-color:var(--terracotta); }
-
-/* ---------- Puzzle illustration (organización comunitaria) ---------- */
-.puzzle-illo-scene{ width:100%; max-width:320px; margin:0 auto; }
-.puzzle-illo-3d{
-  position:relative; width:100%; perspective:1200px;
-  animation:badge-tilt 9s ease-in-out infinite;
-}
-.puzzle-illo{ width:100%; height:auto; display:block; filter:drop-shadow(0 20px 26px rgba(36,31,27,.22)); }
-.puzzle-held-piece{
-  transform-box:fill-box; transform-origin:center;
-  animation:puzzle-fit 3.2s cubic-bezier(.45,0,.2,1) infinite;
-}
-@keyframes puzzle-fit{
-  0%, 12%{ transform:translate(-22px,16px) rotate(-8deg); }
-  45%, 65%{ transform:translate(0,0) rotate(0deg); }
-  85%,100%{ transform:translate(-22px,16px) rotate(-8deg); }
-}
 
 /* ---------- Before / after ---------- */
 .before-after{ display:grid; grid-template-columns:1fr auto 1fr; gap:1.5rem; align-items:center; max-width:980px; perspective:1400px; }
@@ -482,7 +448,7 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 @media (prefers-reduced-motion: reduce){
   .slide, .reveal, .compare-bar, .arrow-down,
   .cover-network .net-lines line, .cover-network .net-nodes circle, .map-pin-halo,
-  .ripple-plane, .ripple-ring, .card-3d, .flip-card-inner, .badge-3d, .puzzle-illo-3d, .hs-hands, .puzzle-held-piece{
+  .ripple-plane, .ripple-ring, .card-3d, .flip-card-inner{
     transition:none !important; animation:none !important;
   }
 }
