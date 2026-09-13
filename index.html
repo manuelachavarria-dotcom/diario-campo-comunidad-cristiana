@@ -19,6 +19,10 @@
     <span class="menu-icon"><span></span><span></span><span></span></span>
     <span class="chrome-label">Índice</span>
   </button>
+  <button class="chrome-btn" id="tourBtn" data-goto="1" aria-label="Ir al recorrido de la presentación">
+    <svg viewBox="0 0 24 24" class="icon"><path d="M4 18c4-1 4-7 8-7s4 6 8 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="18" r="1.7" fill="currentColor"/><circle cx="20" cy="17" r="1.7" fill="currentColor"/></svg>
+    <span class="chrome-label">Recorrido</span>
+  </button>
   <div class="chrome-title">
     <span class="chrome-eyebrow">Psicología Comunitaria</span>
     <span class="chrome-doc">Diario de Campo</span>
@@ -47,7 +51,7 @@
   <!-- 00 · PORTADA -->
   <section class="slide slide--cover" id="s0" data-title="Portada">
     <svg class="cover-network" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g class="net-lines" fill="none" stroke="rgba(250,246,239,0.22)" stroke-width="1">
+      <g class="net-lines" fill="none" stroke="rgba(36,31,27,0.09)" stroke-width="1">
         <line x1="120" y1="140" x2="330" y2="260"/>
         <line x1="330" y1="260" x2="560" y2="150"/>
         <line x1="330" y1="260" x2="300" y2="470"/>
@@ -57,7 +61,7 @@
         <line x1="600" y1="420" x2="480" y2="540"/>
         <line x1="300" y1="470" x2="480" y2="540"/>
       </g>
-      <g class="net-nodes" fill="rgba(250,246,239,0.55)">
+      <g class="net-nodes" fill="rgba(36,31,27,0.16)">
         <circle cx="120" cy="140" r="4.5"/>
         <circle cx="330" cy="260" r="7"/>
         <circle cx="560" cy="150" r="5"/>
@@ -67,24 +71,54 @@
         <circle cx="480" cy="540" r="4.5"/>
       </g>
     </svg>
-    <div class="cover-content">
-      <p class="reveal cover-kicker" style="--d:0">Universidad Católica Luis Amigó</p>
-      <p class="reveal cover-faculty" style="--d:1">Facultad de Ciencias Sociales, Salud y Bienestar &middot; Programa de Psicología</p>
-      <h1 class="reveal cover-title" style="--d:2">Diario de Campo</h1>
-      <p class="reveal cover-subtitle" style="--d:3">Comunidad Cristiana &mdash; Itagüí</p>
-      <div class="reveal cover-meta" style="--d:4">
-        <div class="cover-meta-item"><span class="cover-meta-label">Curso</span>Psicología Comunitaria</div>
-        <div class="cover-meta-item"><span class="cover-meta-label">Profesor</span>Jorge Luis Muñoz</div>
+    <div class="cover-inner">
+      <div class="cover-content">
+        <p class="reveal cover-kicker" style="--d:0">Universidad Católica Luis Amigó</p>
+        <p class="reveal cover-faculty" style="--d:1">Facultad de Ciencias Sociales, Salud y Bienestar &middot; Programa de Psicología</p>
+        <h1 class="reveal cover-title" style="--d:2">Diario de Campo</h1>
+        <p class="reveal cover-subtitle" style="--d:3">Comunidad Cristiana &mdash; Itagüí</p>
+        <div class="reveal cover-meta" style="--d:4">
+          <div class="cover-meta-item"><span class="cover-meta-label">Curso</span>Psicología Comunitaria</div>
+          <div class="cover-meta-item"><span class="cover-meta-label">Profesor</span>Jorge Luis Muñoz</div>
+        </div>
+        <div class="reveal cover-team" style="--d:5">
+          <span class="cover-meta-label">Integrantes</span>
+          <ul>
+            <li>Carolina López López</li>
+            <li>Sofía Vásquez</li>
+            <li>Salome Rendón</li>
+            <li>Manuela Chavarría Pérez</li>
+            <li>María Paulina Castro Pérez</li>
+          </ul>
+        </div>
       </div>
-      <div class="reveal cover-team" style="--d:5">
-        <span class="cover-meta-label">Integrantes</span>
-        <ul>
-          <li>Carolina López López</li>
-          <li>Sofía Vásquez</li>
-          <li>Salome Rendón</li>
-          <li>Manuela Chavarría Pérez</li>
-          <li>María Paulina Castro Pérez</li>
-        </ul>
+      <div class="cover-visual reveal" style="--d:4">
+        <svg class="community-illustration" viewBox="0 0 400 400" role="img" aria-label="Ilustración animada de una comunidad reunida en círculo, símbolo de encuentro y apoyo mutuo">
+          <defs>
+            <radialGradient id="illoGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="var(--terracotta)" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="var(--terracotta)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle class="illo-glow" cx="200" cy="200" r="175" fill="url(#illoGlow)"/>
+          <circle class="illo-orbit" cx="200" cy="200" r="150" fill="none" stroke="var(--line-strong)" stroke-width="1.5" stroke-dasharray="2 11"/>
+          <g class="illo-figures">
+            <g transform="rotate(0 200 200) translate(200 50)"><g class="illo-figure" style="--i:0"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+            <g transform="rotate(45 200 200) translate(200 50)"><g class="illo-figure" style="--i:1"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+            <g transform="rotate(90 200 200) translate(200 50)"><g class="illo-figure" style="--i:2"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+            <g transform="rotate(135 200 200) translate(200 50)"><g class="illo-figure" style="--i:3"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+            <g transform="rotate(180 200 200) translate(200 50)"><g class="illo-figure" style="--i:4"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+            <g transform="rotate(225 200 200) translate(200 50)"><g class="illo-figure" style="--i:5"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+            <g transform="rotate(270 200 200) translate(200 50)"><g class="illo-figure" style="--i:6"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+            <g transform="rotate(315 200 200) translate(200 50)"><g class="illo-figure" style="--i:7"><circle class="illo-head" r="11" cy="-20"/><path class="illo-body" d="M-15 22 Q-15 -6 0 -6 Q15 -6 15 22 Z"/></g></g>
+          </g>
+          <g class="illo-center-icon">
+            <path d="M180 214 L180 194 L200 178 L220 194 L220 214 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+            <line x1="200" y1="178" x2="200" y2="168" stroke="var(--ink)" stroke-width="2"/>
+            <line x1="195" y1="172" x2="205" y2="172" stroke="var(--ink)" stroke-width="2"/>
+          </g>
+        </svg>
+        <p class="illo-caption">Encuentro &middot; participación &middot; redes de apoyo</p>
       </div>
     </div>
     <button class="scroll-cue reveal" data-goto="1" style="--d:6">Comenzar <span class="arrow-down">&#8595;</span></button>

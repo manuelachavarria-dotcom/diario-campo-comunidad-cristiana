@@ -1,5 +1,5 @@
 /* ============================================================
-   Diario de Campo Comprensivo — navegación e interactividad
+   Diario de Campo — navegación e interactividad
    ============================================================ */
 (function () {
   'use strict';
@@ -20,6 +20,7 @@
   var menuOverlay = document.getElementById('menuOverlay');
   var menuClose = document.getElementById('menuClose');
   var menuList = document.getElementById('menuList');
+  var tourBtn = document.getElementById('tourBtn');
   var notesToggle = document.getElementById('notesToggle');
   var notesPanel = document.getElementById('notesPanel');
   var notesText = document.getElementById('notesText');
@@ -58,6 +59,7 @@
     progressFill.style.width = ((current + 1) / total * 100) + '%';
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === total - 1;
+    if (tourBtn) tourBtn.disabled = current === 1;
 
     var notesEl = slides[current].querySelector('.speaker-notes');
     notesText.textContent = notesEl ? notesEl.textContent.trim() : '';
