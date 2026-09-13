@@ -177,28 +177,51 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 
 /* ---------- Cover ---------- */
 .slide--cover{
-  background:radial-gradient(ellipse at 18% 12%, #fffdf9 0%, var(--bg) 55%, #f1e4cd 100%);
+  background:var(--bg);
   color:var(--ink); padding:0; justify-content:center;
 }
-.cover-network{ position:absolute; inset:0; width:100%; height:100%; }
-.cover-network .net-lines line{
-  stroke-dasharray:5 7; animation:net-flow 5s linear infinite;
+.aurora-bg{
+  position:absolute; inset:0; overflow:hidden;
+  -webkit-mask-image:linear-gradient(#000,#000);
 }
-.cover-network .net-nodes circle{
-  animation:node-breathe 3.4s ease-in-out infinite;
-  transform-origin:center; transform-box:fill-box;
+.aurora-blob{
+  position:absolute; border-radius:50%; filter:blur(70px); mix-blend-mode:multiply; will-change:transform;
 }
-.cover-network .net-nodes circle:nth-child(2n){ animation-delay:.5s; }
-.cover-network .net-nodes circle:nth-child(3n){ animation-delay:1s; }
-@keyframes node-breathe{
-  0%, 100%{ opacity:.45; transform:scale(1); }
-  50%{ opacity:.85; transform:scale(1.35); }
+.aurora-blob--terracotta{
+  width:52vw; height:52vw; max-width:640px; max-height:640px;
+  background:radial-gradient(circle, rgba(193,98,45,.4) 0%, rgba(193,98,45,0) 70%);
+  top:-14%; left:-8%;
+  animation:aurora-drift-a 26s ease-in-out infinite;
+}
+.aurora-blob--teal{
+  width:46vw; height:46vw; max-width:560px; max-height:560px;
+  background:radial-gradient(circle, rgba(39,75,69,.32) 0%, rgba(39,75,69,0) 70%);
+  bottom:-16%; right:-6%;
+  animation:aurora-drift-b 32s ease-in-out infinite;
+}
+.aurora-blob--gold{
+  width:38vw; height:38vw; max-width:460px; max-height:460px;
+  background:radial-gradient(circle, rgba(176,141,62,.32) 0%, rgba(176,141,62,0) 70%);
+  top:38%; left:42%;
+  animation:aurora-drift-c 22s ease-in-out infinite;
+}
+@keyframes aurora-drift-a{
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(6vw,5vh) scale(1.12); }
+}
+@keyframes aurora-drift-b{
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(-5vw,-6vh) scale(1.08); }
+}
+@keyframes aurora-drift-c{
+  0%,100%{ transform:translate(-4vw,3vh) scale(.95); }
+  50%{ transform:translate(4vw,-4vh) scale(1.15); }
 }
 .cover-inner{
   position:relative; z-index:2; max-width:1220px; margin:0 auto; width:100%;
   padding:0 clamp(1.5rem,6vw,4rem);
-  display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(1.5rem,4vw,3.5rem); align-items:center;
 }
+.cover-inner--single{ display:block; max-width:760px; }
 .cover-content{ text-align:left; }
 .cover-kicker{ font-size:.85rem; letter-spacing:.16em; text-transform:uppercase; color:var(--terracotta); font-weight:600; margin-bottom:.4rem; }
 .cover-faculty{ font-size:.85rem; color:var(--ink-soft); margin-bottom:1.6rem; max-width:40ch; }
@@ -212,38 +235,6 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 .cover-team li{ position:relative; padding-left:.9rem; }
 .cover-team li::before{ content:''; position:absolute; left:0; top:.5em; width:5px; height:5px; border-radius:50%; background:var(--terracotta); }
 
-/* ---------- Cover 3D ripple (community impact expanding outward) ---------- */
-.cover-visual{ display:flex; flex-direction:column; align-items:center; gap:1.6rem; }
-.ripple-scene{
-  width:min(300px, 85%); aspect-ratio:1/1; perspective:900px;
-  display:flex; align-items:center; justify-content:center;
-}
-.ripple-plane{
-  position:relative; width:82%; height:82%; transform-style:preserve-3d;
-  animation:plane-breathe 10s ease-in-out infinite;
-}
-.ripple-core{
-  position:absolute; inset:40%; border-radius:50%;
-  background:radial-gradient(circle, var(--terracotta) 0%, rgba(193,98,45,.55) 55%, rgba(193,98,45,0) 100%);
-  box-shadow:0 0 44px 6px rgba(193,98,45,.22);
-}
-.ripple-ring{
-  position:absolute; inset:42%; border-radius:50%; border:1.5px solid var(--terracotta);
-  opacity:0; animation:ripple-out 4.8s cubic-bezier(.25,.6,.4,1) infinite;
-}
-.ripple-ring:nth-child(3){ border-color:var(--teal); animation-delay:1.2s; }
-.ripple-ring:nth-child(4){ border-color:var(--gold); animation-delay:2.4s; }
-.ripple-ring:nth-child(5){ border-color:var(--terracotta); animation-delay:3.6s; }
-@keyframes ripple-out{
-  0%{ inset:42%; opacity:0; border-width:2.5px; }
-  12%{ opacity:.5; }
-  100%{ inset:-6%; opacity:0; border-width:1px; }
-}
-@keyframes plane-breathe{
-  0%,100%{ transform:rotateX(58deg); }
-  50%{ transform:rotateX(50deg); }
-}
-.illo-caption{ font-size:.82rem; font-style:italic; color:var(--ink-faint); text-align:center; max-width:30ch; }
 .scroll-cue{
   position:absolute; bottom:6.5rem; left:50%; transform:translateX(-50%);
   color:var(--ink-faint); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
@@ -446,9 +437,8 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
-  .slide, .reveal, .compare-bar, .arrow-down,
-  .cover-network .net-lines line, .cover-network .net-nodes circle, .map-pin-halo,
-  .ripple-plane, .ripple-ring, .card-3d, .flip-card-inner{
+  .slide, .reveal, .compare-bar, .arrow-down, .map-pin-halo,
+  .aurora-blob, .card-3d, .flip-card-inner{
     transition:none !important; animation:none !important;
   }
 }
@@ -535,12 +525,10 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
   .ba-arrow{ transform:rotate(90deg); justify-self:center; }
   .cover-meta{ gap:1.4rem; }
   .chrome-title{ display:none; }
-  .cover-inner{ grid-template-columns:1fr; text-align:center; padding-top:1.5rem; }
+  .cover-inner--single{ text-align:center; padding-top:1.5rem; }
   .cover-content{ text-align:center; }
   .cover-meta, .cover-team ul{ justify-content:center; }
   .cover-team{ margin:0 auto; }
-  .cover-visual{ order:-1; }
-  .ripple-scene{ width:min(220px, 70%); }
 }
 @media (max-width: 600px){
   body{ overflow-y:auto; }
@@ -549,7 +537,6 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
   .scroll-cue{ display:none; }
   h2{ font-size:clamp(1.5rem,6vw,2rem); }
   .index-text{ font-size:1.05rem; }
-  .ripple-scene{ width:min(180px, 60%); }
   .chrome-label{ display:none; }
   .chrome-btn{ gap:0; }
   .chrome-right{ gap:.7rem; }
