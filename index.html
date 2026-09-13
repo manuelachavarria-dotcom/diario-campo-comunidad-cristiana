@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diario de Campo · Comunidad Cristiana</title>
+<meta name="description" content="Diario de campo — Comunidad Cristiana, Itagüí. Psicología Comunitaria, Universidad Católica Luis Amigó.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="chrome">
+  <button class="chrome-btn" id="menuToggle" aria-label="Abrir menú de secciones" aria-expanded="false">
+    <span class="menu-icon"><span></span><span></span><span></span></span>
+    <span class="chrome-label">Índice</span>
+  </button>
+  <div class="chrome-title">
+    <span class="chrome-eyebrow">Psicología Comunitaria</span>
+    <span class="chrome-doc">Diario de Campo</span>
+  </div>
+  <div class="chrome-right">
+    <button class="chrome-btn" id="notesToggle" aria-label="Mostrar notas del expositor" aria-pressed="false">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M4 4h16v12H8l-4 4V4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="7" y1="8" x2="17" y2="8" stroke="currentColor" stroke-width="1.4"/><line x1="7" y1="11.5" x2="14" y2="11.5" stroke="currentColor" stroke-width="1.4"/></svg>
+      <span class="chrome-label">Notas</span>
+    </button>
+    <span class="slide-counter"><span id="slideNow">01</span><span class="counter-sep">/</span><span id="slideTotal">15</span></span>
+  </div>
+</header>
+
+<nav class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-panel">
+    <div class="menu-panel-head">
+      <span>Contenido</span>
+      <button class="menu-close" id="menuClose" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <ol class="menu-list" id="menuList"></ol>
+  </div>
+</nav>
+
+<main class="deck" id="deck">
+
+  <!-- 00 · PORTADA -->
+  <section class="slide slide--cover" id="s0" data-title="Portada">
+    <svg class="cover-network" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g class="net-lines" fill="none" stroke="rgba(250,246,239,0.22)" stroke-width="1">
+        <line x1="120" y1="140" x2="330" y2="260"/>
+        <line x1="330" y1="260" x2="560" y2="150"/>
+        <line x1="330" y1="260" x2="300" y2="470"/>
+        <line x1="330" y1="260" x2="600" y2="420"/>
+        <line x1="560" y1="150" x2="770" y2="260"/>
+        <line x1="600" y1="420" x2="770" y2="260"/>
+        <line x1="600" y1="420" x2="480" y2="540"/>
+        <line x1="300" y1="470" x2="480" y2="540"/>
+      </g>
+      <g class="net-nodes" fill="rgba(250,246,239,0.55)">
+        <circle cx="120" cy="140" r="4.5"/>
+        <circle cx="330" cy="260" r="7"/>
+        <circle cx="560" cy="150" r="5"/>
+        <circle cx="300" cy="470" r="5"/>
+        <circle cx="600" cy="420" r="6"/>
+        <circle cx="770" cy="260" r="4.5"/>
+        <circle cx="480" cy="540" r="4.5"/>
+      </g>
+    </svg>
+    <div class="cover-content">
+      <p class="reveal cover-kicker" style="--d:0">Universidad Católica Luis Amigó</p>
+      <p class="reveal cover-faculty" style="--d:1">Facultad de Ciencias Sociales, Salud y Bienestar &middot; Programa de Psicología</p>
+      <h1 class="reveal cover-title" style="--d:2">Diario de Campo</h1>
+      <p class="reveal cover-subtitle" style="--d:3">Comunidad Cristiana &mdash; Itagüí</p>
+      <div class="reveal cover-meta" style="--d:4">
+        <div class="cover-meta-item"><span class="cover-meta-label">Curso</span>Psicología Comunitaria</div>
+        <div class="cover-meta-item"><span class="cover-meta-label">Profesor</span>Jorge Luis Muñoz</div>
+      </div>
+      <div class="reveal cover-team" style="--d:5">
+        <span class="cover-meta-label">Integrantes</span>
+        <ul>
+          <li>Carolina López López</li>
+          <li>Sofía Vásquez</li>
+          <li>Salome Rendón</li>
+          <li>Manuela Chavarría Pérez</li>
+          <li>María Paulina Castro Pérez</li>
+        </ul>
+      </div>
+    </div>
+    <button class="scroll-cue reveal" data-goto="1" style="--d:6">Comenzar <span class="arrow-down">&#8595;</span></button>
+    <div class="speaker-notes">Bienvenida breve: presenten el equipo, la materia y el propósito del diario de campo &mdash; comprender, desde la Psicología Comunitaria, la dinámica de tres iglesias cristianas visitadas en Itagüí durante septiembre de 2026.</div>
+  </section>
+
+  <!-- 01 · AGENDA -->
+  <section class="slide" id="s1" data-title="Agenda">
+    <div class="slide-inner layout-index">
+      <div class="slide-head">
+        <span class="eyebrow reveal" style="--d:0">Contenido</span>
+        <h2 class="reveal" style="--d:1">Recorrido de la presentación</h2>
+      </div>
+      <p class="reveal index-hint" style="--d:2">Toca cualquier punto para ir directo a esa sección.</p>
+      <ol class="index-list">
+        <li class="reveal index-item" data-goto="2" style="--d:2"><span class="index-num">01</span><span class="index-text">Introducción y acceso al campo</span><span class="index-go">Ir &rarr;</span></li>
+        <li class="reveal index-item" data-goto="3" style="--d:3"><span class="index-num">02</span><span class="index-text">Presentación de la comunidad</span><span class="index-go">Ir &rarr;</span></li>
+        <li class="reveal index-item" data-goto="4" style="--d:4"><span class="index-num">03</span><span class="index-text">El proceso de la visita</span><span class="index-go">Ir &rarr;</span></li>
+        <li class="reveal index-item index-item--group" style="--d:5">
+          <div class="index-item-row" data-goto="5">
+            <span class="index-num">04</span><span class="index-text">Hallazgos por sede</span><span class="index-go">Ir &rarr;</span>
+          </div>
+          <div class="index-subnav">
+            <button data-goto="5">San Pío</button>
+            <button data-goto="6">Pilsen</button>
+            <button data-goto="7">Simón Bolívar</button>
+          </div>
+        </li>
+        <li class="reveal index-item" data-goto="8" style="--d:6"><span class="index-num">05</span><span class="index-text">Síntesis comparativa</span><span class="index-go">Ir &rarr;</span></li>
+        <li class="reveal index-item" data-goto="9" style="--d:7"><span class="index-num">06</span><span class="index-text">Voces, preocupaciones y lo no evidente</span><span class="index-go">Ir &rarr;</span></li>
+        <li class="reveal index-item" data-goto="11" style="--d:8"><span class="index-num">07</span><span class="index-text">Momento reflexivo y mirada comunitaria</span><span class="index-go">Ir &rarr;</span></li>
+        <li class="reveal index-item" data-goto="13" style="--d:9"><span class="index-num">08</span><span class="index-text">Conclusiones</span><span class="index-go">Ir &rarr;</span></li>
+      </ol>
+    </div>
+    <div class="speaker-notes">Enuncien rápidamente el mapa de la exposición: partimos del contexto y el acceso al campo, pasamos por los hallazgos de cada sede, y cerramos con el análisis desde la Psicología Comunitaria y las conclusiones.</div>
+  </section>
+
+  <!-- 02 · INTRODUCCIÓN -->
+  <section class="slide" id="s2" data-title="Introducción y acceso al campo">
+    <div class="slide-inner layout-split">
+      <div class="split-col">
+        <span class="eyebrow reveal" style="--d:0">01 &middot; Introducción</span>
+        <h2 class="reveal" style="--d:1">Un acercamiento institucional y organizado</h2>
+        <p class="reveal body-lg" style="--d:2">El grupo se acercó a organizaciones basadas en la fe &mdash; tres iglesias cristianas de Itagüí &mdash; para comprender, de primera mano, sus dinámicas comunitarias desde la Psicología Comunitaria.</p>
+        <p class="reveal" style="--d:3">La elección no fue al azar: un enlace dentro de la <strong>Alcaldía de Itagüí</strong> facilitó el contacto con la persona encargada de vincular a las iglesias del municipio, lo que permitió un acercamiento ordenado, sede por sede.</p>
+        <p class="reveal" style="--d:4">Antes del primer contacto, el conocimiento previo del grupo era general: iglesias que se reúnen entre semana o fines de semana para la oración, y que en ocasiones organizan encuentros de parejas, jornadas infantiles y espacios familiares.</p>
+      </div>
+      <div class="split-col split-col--visual">
+        <div class="flow-diagram reveal" style="--d:2">
+          <div class="flow-node flow-node--start">Alcaldía de Itagüí</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node">Enlace de comunidades cristianas</div>
+          <div class="flow-arrow"></div>
+          <div class="flow-node flow-node--end">Contacto ordenado con las 3 sedes</div>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-notes">Expliquen que el acceso al campo no fue espontáneo sino gestionado institucionalmente a través de la Alcaldía. Esto es relevante metodológicamente: condicionó el orden y el respeto por los horarios de cada iglesia.</div>
+  </section>
+
+  <!-- 03 · PRESENTACIÓN COMUNIDAD -->
+  <section class="slide" id="s3" data-title="Presentación de la comunidad">
+    <div class="slide-inner layout-split">
+      <div class="split-col split-col--visual">
+        <svg class="map-diagram reveal" style="--d:2" viewBox="0 0 480 420" role="img" aria-label="Tres sedes de la comunidad cristiana en Itagüí">
+          <circle class="map-region" cx="240" cy="210" r="170"/>
+          <g class="map-pin" data-pin="1" data-goto="5" tabindex="0" role="button" aria-label="Ir a Sede San Pío" transform="translate(150,140)">
+            <circle class="map-pin-halo" r="30"/><circle r="30"/><text x="0" y="6">SP</text>
+          </g>
+          <g class="map-pin" data-pin="2" data-goto="6" tabindex="0" role="button" aria-label="Ir a Sede Pilsen" transform="translate(330,190)">
+            <circle class="map-pin-halo" r="30"/><circle r="30"/><text x="0" y="6">PL</text>
+          </g>
+          <g class="map-pin" data-pin="3" data-goto="7" tabindex="0" role="button" aria-label="Ir a Sede Simón Bolívar" transform="translate(230,320)">
+            <circle class="map-pin-halo" r="30"/><circle r="30"/><text x="0" y="6">SB</text>
+          </g>
+        </svg>
+        <div class="map-legend reveal" style="--d:3">
+          <span><i style="background:var(--terracotta)"></i>San Pío (SP)</span>
+          <span><i style="background:var(--teal)"></i>Pilsen (PL)</span>
+          <span><i style="background:var(--gold)"></i>Simón Bolívar (SB)</span>
+        </div>
+        <p class="reveal diagram-hint" style="--d:4">Toca una sede en el mapa para ver su detalle.</p>
+      </div>
+      <div class="split-col">
+        <span class="eyebrow reveal" style="--d:0">01 &middot; Introducción</span>
+        <h2 class="reveal" style="--d:1">Una identidad común, tres dinámicas propias</h2>
+        <p class="reveal body-lg" style="--d:2">Tres sedes cristianas ubicadas en distintos sectores de Itagüí &mdash; Simón Bolívar, Pilsen y San Pío &mdash; comparten la identidad cristiana como eje común.</p>
+        <p class="reveal" style="--d:3">Cada una, sin embargo, tiene su propia forma de organizarse, sus propios servicios y su propia relación con la comunidad que la rodea: un contexto urbano donde cada sede está insertada de manera distinta en su entorno.</p>
+      </div>
+    </div>
+    <div class="speaker-notes">Subrayen que, aunque las tres iglesias comparten la fe cristiana como identidad, cada sede desarrolla una relación distinta con su entorno inmediato — esto es clave para entender la diversidad dentro de una misma identidad religiosa.</div>
+  </section>
+
+  <!-- 04 · METODOLOGÍA -->
+  <section class="slide" id="s4" data-title="El proceso de la visita">
+    <div class="slide-inner layout-stack">
+      <div class="slide-head">
+        <span class="eyebrow reveal" style="--d:0">02 &middot; Metodología</span>
+        <h2 class="reveal" style="--d:1">Tres visitas, un mismo instrumento</h2>
+        <p class="reveal body-lg" style="--d:2">En septiembre de 2026 se visitaron las tres sedes, aplicando una <strong>ficha de caracterización</strong> para recoger información sobre servicios, asistencia y población atendida.</p>
+      </div>
+      <div class="timeline reveal" style="--d:3">
+        <div class="timeline-track"></div>
+        <div class="timeline-stop">
+          <span class="timeline-dot"></span>
+          <span class="timeline-date">2 sep. 2026</span>
+          <span class="timeline-place">San Pío</span>
+        </div>
+        <div class="timeline-stop">
+          <span class="timeline-dot"></span>
+          <span class="timeline-date">2 sep. 2026</span>
+          <span class="timeline-place">Pilsen</span>
+        </div>
+        <div class="timeline-stop">
+          <span class="timeline-dot"></span>
+          <span class="timeline-date">7 sep. 2026</span>
+          <span class="timeline-place">Simón Bolívar</span>
+        </div>
+      </div>
+      <div class="callout reveal" style="--d:4">
+        <p>Un hallazgo transversal se hizo evidente desde el inicio: en las <strong>tres</strong> iglesias, niños y familias ocupan siempre un lugar protagónico dentro de la oferta de servicios.</p>
+      </div>
+    </div>
+    <div class="speaker-notes">Mencionen el instrumento usado (ficha de caracterización) y el orden real de las visitas. Resalten el hallazgo transversal de la centralidad de niños y familias como puente hacia las diapositivas de cada sede.</div>
+  </section>
+
+  <!-- 05 · SEDE SAN PÍO -->
+  <section class="slide slide--sede" id="s5" data-title="Sede San Pío" style="--sede-color:var(--terracotta)">
+    <div class="slide-inner layout-sede">
+      <div class="sede-header reveal" style="--d:0">
+        <span class="eyebrow">04 &middot; Hallazgos &middot; 1 de 3</span>
+        <h2>Sede San Pío</h2>
+        <p class="body-lg">Apoyo social, alimentación y acompañamiento familiar, articulados con la comunidad del sector.</p>
+      </div>
+      <div class="sede-stat reveal" style="--d:1">
+        <span class="stat-number" data-count="68">0</span>
+        <span class="stat-label">asistentes aprox.<br>de 120 de capacidad</span>
+      </div>
+      <div class="sede-programs reveal" style="--d:2">
+        <h3>Servicios y programas</h3>
+        <ul class="tag-list">
+          <li>Ayuda Mutua</li>
+          <li>Canasta de Amor</li>
+          <li>Proyecto Felipe &middot; 17 niños</li>
+          <li>Trabajo con la JAC</li>
+          <li>Vacaciones recreativas</li>
+          <li>Novenas &middot; ~50 niños</li>
+        </ul>
+      </div>
+      <div class="sede-population reveal" style="--d:3">
+        <h3>Población</h3>
+        <p>Niños de 7 a 15 años, madres, algunas abuelas, familias, miembros de la iglesia y comunidad externa con necesidades sociales.</p>
+      </div>
+    </div>
+    <div class="speaker-notes">San Pío destaca por su enfoque de apoyo social y alimentario. El Proyecto Felipe es el programa más estructurado: atención integral a 17 niños con sus madres, guiado por una profesional en educación, con participación semanal de los padres.</div>
+  </section>
+
+  <!-- 06 · SEDE PILSEN -->
+  <section class="slide slide--sede" id="s6" data-title="Sede Pilsen" style="--sede-color:var(--teal)">
+    <div class="slide-inner layout-sede">
+      <div class="sede-header reveal" style="--d:0">
+        <span class="eyebrow">04 &middot; Hallazgos &middot; 2 de 3</span>
+        <h2>Sede Pilsen</h2>
+        <p class="body-lg">Acompañamiento espiritual, familiar y social, con proyección institucional más amplia.</p>
+      </div>
+      <div class="sede-stat reveal" style="--d:1">
+        <span class="stat-number" data-count="60">0</span>
+        <span class="stat-label">asistentes aprox.<br>a la sede local</span>
+      </div>
+      <div class="sede-programs reveal" style="--d:2">
+        <h3>Servicios y acciones</h3>
+        <ul class="tag-list">
+          <li>Servicio pastoral</li>
+          <li>Estudio de la Palabra</li>
+          <li>Campañas comunitarias</li>
+          <li>Trabajo en colegios y empresas</li>
+          <li>Familias, jóvenes y universitarios</li>
+          <li>Acompañamiento a infancia vulnerable</li>
+        </ul>
+      </div>
+      <div class="sede-population reveal" style="--d:3">
+        <h3>Alcance institucional</h3>
+        <p>ONG con presencia en ~10 países (origen en Ecuador, casa matriz en Colombia); ~150 personas vinculadas a la organización.</p>
+      </div>
+    </div>
+    <div class="speaker-notes">Pilsen se diferencia por su proyección institucional: hace parte de una ONG internacional y trabaja con un lenguaje social, no solo religioso, para acercarse a colegios y empresas. También acompaña a una fundación que atiende niños afectados por abuso sexual.</div>
+  </section>
+
+  <!-- 07 · SEDE SIMÓN BOLÍVAR -->
+  <section class="slide slide--sede" id="s7" data-title="Sede Simón Bolívar" style="--sede-color:var(--gold)">
+    <div class="slide-inner layout-sede">
+      <div class="sede-header reveal" style="--d:0">
+        <span class="eyebrow">04 &middot; Hallazgos &middot; 3 de 3</span>
+        <h2>Sede Simón Bolívar</h2>
+        <p class="body-lg">Congregación de carácter familiar y generacional, con la mayor población de las tres sedes.</p>
+      </div>
+      <div class="sede-stat reveal" style="--d:1">
+        <span class="stat-number" data-count="250">0</span>
+        <span class="stat-label">personas vinculadas<br>&middot; equipo de ~25</span>
+      </div>
+      <div class="sede-programs reveal" style="--d:2">
+        <h3>Programas y servicios</h3>
+        <ul class="tag-list">
+          <li>Cultos juveniles</li>
+          <li>Parejas Saludables</li>
+          <li>Mujeres en Plenitud</li>
+          <li>Escuela de niños</li>
+          <li>Fundación PAVIDA</li>
+          <li>Comedor comunitario &middot; 80&ndash;100 niños</li>
+        </ul>
+      </div>
+      <div class="sede-population reveal" style="--d:3">
+        <h3>Población</h3>
+        <p>Desde bebés hasta adultos mayores: niños, adolescentes, jóvenes, mujeres, hombres, padres y madres, familias.</p>
+      </div>
+    </div>
+    <div class="speaker-notes">Simón Bolívar es la sede más grande y con mayor rango generacional. Destaquen la Fundación PAVIDA y el área psicosocial, que atiende casos de violencia y abuso sexual infantil junto con el comedor comunitario.</div>
+  </section>
+
+  <!-- 08 · SÍNTESIS COMPARATIVA -->
+  <section class="slide" id="s8" data-title="Síntesis comparativa">
+    <div class="slide-inner layout-stack">
+      <div class="slide-head">
+        <span class="eyebrow reveal" style="--d:0">05 &middot; Síntesis</span>
+        <h2 class="reveal" style="--d:1">Tres sedes, tres escalas de alcance</h2>
+      </div>
+      <p class="reveal diagram-hint" style="--d:2">Toca una sede para ver su detalle completo.</p>
+      <div class="compare-chart reveal" style="--d:2" id="compareChart">
+        <button class="compare-row" data-goto="5">
+          <span class="compare-label">San Pío</span>
+          <div class="compare-track"><div class="compare-bar" style="--target:27.2%; background:var(--terracotta)"></div></div>
+          <span class="compare-value">68</span>
+        </button>
+        <button class="compare-row" data-goto="6">
+          <span class="compare-label">Pilsen</span>
+          <div class="compare-track"><div class="compare-bar" style="--target:24%; background:var(--teal)"></div></div>
+          <span class="compare-value">60</span>
+        </button>
+        <button class="compare-row" data-goto="7">
+          <span class="compare-label">Simón Bolívar</span>
+          <div class="compare-track"><div class="compare-bar" style="--target:100%; background:var(--gold)"></div></div>
+          <span class="compare-value">250</span>
+        </button>
+      </div>
+      <div class="compare-notes-grid reveal" style="--d:3">
+        <div class="compare-card"><h4>San Pío</h4><p>Enfoque social y alimentario. Programa ancla: Proyecto Felipe.</p></div>
+        <div class="compare-card"><h4>Pilsen</h4><p>Enfoque espiritual-institucional. Articulación con ONG internacional.</p></div>
+        <div class="compare-card"><h4>Simón Bolívar</h4><p>Enfoque familiar-generacional. Articulación con Fundación PAVIDA.</p></div>
+      </div>
+    </div>
+    <div class="speaker-notes">Usen esta diapositiva para comparar magnitudes: Simón Bolívar concentra la mayor población, pero las tres comparten servicios diversos con identidad propia. La cifra no indica "mejor" sino escalas y enfoques distintos.</div>
+  </section>
+
+  <!-- 09 · QUÉ ESCUCHARON -->
+  <section class="slide" id="s9" data-title="¿Qué escucharon?">
+    <div class="slide-inner layout-quote">
+      <span class="eyebrow reveal" style="--d:0">06 &middot; Voces del campo</span>
+      <h2 class="reveal" style="--d:1">¿Qué escucharon?</h2>
+      <blockquote class="pull-quote reveal" style="--d:2">
+        &ldquo;Preocupaciones recurrentes en las tres visitas: consumo de sustancias psicoactivas y niños que enfrentan problemas en sus núcleos familiares.&rdquo;
+      </blockquote>
+      <p class="reveal body-lg" style="--d:3">Pastores y líderes coincidieron en que sus iglesias, en muchos casos, no cuentan con recursos suficientes &mdash;econonómicos, humanos o materiales&mdash; para abarcar todas las necesidades identificadas en su comunidad.</p>
+    </div>
+    <div class="speaker-notes">Enfaticen que estas preocupaciones no fueron anecdóticas de una sola sede: se repitieron en las tres, lo que sugiere problemáticas comunes a los sectores donde están ubicadas las iglesias.</div>
+  </section>
+
+  <!-- 10 · LO QUE NO SE VE -->
+  <section class="slide" id="s10" data-title="Lo que no se ve a simple vista">
+    <div class="slide-inner layout-split">
+      <div class="split-col">
+        <span class="eyebrow reveal" style="--d:0">06 &middot; Voces del campo</span>
+        <h2 class="reveal" style="--d:1">Lo que no se ve a simple vista</h2>
+        <p class="reveal body-lg" style="--d:2">Detrás de los servicios, existen relaciones que mantienen organizada y activa a la comunidad: un liderazgo cercano de pastores y líderes que orienta, acompaña y promueve la participación.</p>
+        <p class="reveal" style="--d:3">Se evidencian además redes de apoyo con actores externos &mdash;la Junta de Acción Comunal, la Fundación PAVIDA y la Alcaldía de Itagüí&mdash; que amplían el alcance de las iniciativas.</p>
+        <p class="reveal" style="--d:4">Las iglesias construyen significados compartidos alrededor de la familia, el apoyo mutuo, los valores y el bienestar de niños, jóvenes y adultos.</p>
+      </div>
+      <div class="split-col split-col--visual">
+        <svg class="network-diagram reveal" style="--d:2" viewBox="0 0 420 420" role="img" aria-label="Red de apoyo alrededor de la iglesia">
+          <g class="net-links" fill="none" stroke="var(--line-strong)" stroke-width="1.4">
+            <line x1="210" y1="210" x2="210" y2="70"/>
+            <line x1="210" y1="210" x2="350" y2="150"/>
+            <line x1="210" y1="210" x2="350" y2="290"/>
+            <line x1="210" y1="210" x2="210" y2="360"/>
+            <line x1="210" y1="210" x2="70" y2="290"/>
+            <line x1="210" y1="210" x2="70" y2="150"/>
+          </g>
+          <g class="net-center">
+            <circle cx="210" cy="210" r="46"/>
+            <text x="210" y="216">Iglesia</text>
+          </g>
+          <g class="net-satellite" tabindex="0" role="button" data-note="jac" transform="translate(210,70)"><circle r="30"/><text y="5">JAC</text></g>
+          <g class="net-satellite" tabindex="0" role="button" data-note="alcaldia" transform="translate(350,150)"><circle r="30"/><text y="5">Alcaldía</text></g>
+          <g class="net-satellite" tabindex="0" role="button" data-note="pavida" transform="translate(350,290)"><circle r="30"/><text y="5">PAVIDA</text></g>
+          <g class="net-satellite" tabindex="0" role="button" data-note="familias" transform="translate(210,360)"><circle r="30"/><text y="5">Familias</text></g>
+          <g class="net-satellite" tabindex="0" role="button" data-note="ninez" transform="translate(70,290)"><circle r="30"/><text y="5">Niñez</text></g>
+          <g class="net-satellite" tabindex="0" role="button" data-note="lideres" transform="translate(70,150)"><circle r="30"/><text y="5">Líderes</text></g>
+        </svg>
+        <p class="diagram-hint">Toca un nodo para ver su rol en la red.</p>
+        <div class="net-caption" id="netCaption" aria-live="polite">
+          <span class="net-caption-label">Selecciona un nodo</span>
+          <p id="netCaptionText">La iglesia articula relaciones con actores externos y con su propia comunidad interna.</p>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-notes">Este es un punto de análisis clave: la comunidad no se limita al espacio físico de la iglesia, sino que se extiende en relaciones, redes, formas de liderazgo y acciones colectivas construidas en interacción con el contexto.</div>
+  </section>
+
+  <!-- 11 · MOMENTO REFLEXIVO -->
+  <section class="slide" id="s11" data-title="Momento reflexivo">
+    <div class="slide-inner layout-stack">
+      <div class="slide-head">
+        <span class="eyebrow reveal" style="--d:0">07 &middot; Reflexión</span>
+        <h2 class="reveal" style="--d:1">¿Qué cambió en nuestra mirada?</h2>
+      </div>
+      <div class="before-after">
+        <div class="ba-col reveal" style="--d:2">
+          <span class="ba-label">Antes de la visita</span>
+          <p>La idea implícita de que todo encuentro religioso debía centrarse, de forma estricta, en la lectura literal de la Biblia &mdash;con poco espacio para otras formas de acompañamiento.</p>
+        </div>
+        <div class="ba-arrow reveal" style="--d:3">&#8594;</div>
+        <div class="ba-col ba-col--after reveal" style="--d:4">
+          <span class="ba-label">Después de la visita</span>
+          <p>Los líderes procuran que cada encuentro sea un momento agradable de participación activa, reconociendo una dimensión más relacional, comunitaria y flexible del acompañamiento espiritual.</p>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-notes">Compartan cómo esta visita movilizó una idea previa del grupo. El cambio no es menor: pasar de ver "doctrina literal" a ver una práctica relacional y flexible es, en sí mismo, un hallazgo psicosocial.</div>
+  </section>
+
+  <!-- 12 · MIRADA DESDE LA PSICOLOGÍA COMUNITARIA -->
+  <section class="slide" id="s12" data-title="Mirada desde la Psicología Comunitaria">
+    <div class="slide-inner layout-split">
+      <div class="split-col">
+        <span class="eyebrow reveal" style="--d:0">07 &middot; Reflexión</span>
+        <h2 class="reveal" style="--d:1">Una primera mirada desde la Psicología Comunitaria</h2>
+        <p class="reveal body-lg" style="--d:2">Las tres iglesias funcionan como espacios de encuentro, participación y construcción de redes de apoyo, respondiendo tanto a las necesidades de sus miembros como a situaciones del entorno.</p>
+        <p class="reveal" style="--d:3">Se observa una organización comunitaria basada en el trabajo conjunto con entidades externas, lo que amplía las posibilidades de intervención y el acceso a recursos compartidos.</p>
+      </div>
+      <div class="split-col split-col--visual">
+        <p class="diagram-hint">Toca un concepto para ver cómo se evidenció en el campo.</p>
+        <div class="concept-chips reveal" style="--d:2">
+          <button class="chip" data-note="Espacios de participación activa que las tres iglesias generan en sus encuentros de oración, formación y actividades comunitarias.">Encuentro</button>
+          <button class="chip" data-note="Formas diferenciadas de involucrarse según el grupo poblacional: niños, jóvenes, familias, parejas, mujeres, hombres y adultos mayores.">Participación</button>
+          <button class="chip" data-note="Vínculos con la Junta de Acción Comunal, la Alcaldía de Itagüí y la Fundación PAVIDA que amplían el alcance de las iniciativas.">Redes de apoyo</button>
+          <button class="chip" data-note="Trabajo conjunto con entidades externas para compartir recursos y ampliar las posibilidades de intervención.">Organización comunitaria</button>
+          <button class="chip" data-note="Significados compartidos construidos alrededor de la familia, el apoyo mutuo y los valores.">Sentido de pertenencia</button>
+          <button class="chip" data-note="Capacidades y apoyos identificados en las tres sedes que pueden fortalecerse mediante el acompañamiento comunitario.">Recursos comunitarios</button>
+          <button class="chip" data-note="Vías mediante las cuales la comunidad podría responder, junto con las iglesias, a las necesidades sociales identificadas.">Procesos participativos</button>
+        </div>
+        <div class="net-caption" id="chipCaption" aria-live="polite">
+          <span class="net-caption-label">Selecciona un concepto</span>
+          <p id="chipCaptionText">Cada concepto conecta la teoría con lo observado en las tres sedes visitadas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-notes">Cierre conceptual: estas iglesias son a la vez espacios donde se construyen vínculos y pertenencia, y escenarios donde se identifican necesidades y problemáticas sociales que podrían fortalecerse mediante procesos participativos.</div>
+  </section>
+
+  <!-- 13 · CONCLUSIONES -->
+  <section class="slide" id="s13" data-title="Conclusiones">
+    <div class="slide-inner layout-stack">
+      <div class="slide-head">
+        <span class="eyebrow reveal" style="--d:0">08 &middot; Cierre</span>
+        <h2 class="reveal" style="--d:1">Conclusiones</h2>
+      </div>
+      <div class="conclusion-grid">
+        <div class="conclusion-card reveal" style="--d:2">
+          <span class="conclusion-num">01</span>
+          <p>La comunidad trasciende el espacio físico de la iglesia: se sostiene en relaciones, redes y liderazgos construidos en interacción con el contexto.</p>
+        </div>
+        <div class="conclusion-card reveal" style="--d:3">
+          <span class="conclusion-num">02</span>
+          <p>Las tres sedes comparten una identidad cristiana común, pero desarrollan dinámicas, servicios y escalas de alcance propias.</p>
+        </div>
+        <div class="conclusion-card reveal" style="--d:4">
+          <span class="conclusion-num">03</span>
+          <p>Niños y familias ocupan un lugar protagónico transversal, evidenciando una gestión sostenida hacia esta población.</p>
+        </div>
+        <div class="conclusion-card reveal" style="--d:5">
+          <span class="conclusion-num">04</span>
+          <p>Necesidades sociales (consumo de SPA, problemáticas familiares) y recursos comunitarios coexisten como potencial de fortalecimiento participativo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-notes">Cierren retomando las cuatro ideas fuerza. Si el tiempo lo permite, inviten a la reflexión sobre el rol que podría cumplir la Psicología Comunitaria acompañando estos procesos participativos.</div>
+  </section>
+
+  <!-- 14 · REFERENCIAS -->
+  <section class="slide slide--refs" id="s14" data-title="Referencias y créditos">
+    <div class="slide-inner layout-stack">
+      <div class="slide-head">
+        <span class="eyebrow reveal" style="--d:0">Cierre</span>
+        <h2 class="reveal" style="--d:1">Referencias y créditos</h2>
+      </div>
+      <div class="refs-block reveal" style="--d:2">
+        <h3>Fuente</h3>
+        <p>Diario de Campo &mdash; Comunidad Cristiana. Visitas de campo realizadas en Itagüí (sectores San Pío, Pilsen y Simón Bolívar), 2 y 7 de septiembre de 2026. Instrumento: ficha de caracterización aplicada por el grupo.</p>
+        <p class="refs-note">Nota metodológica: este diario de campo es un registro empírico de primera mano; no incorpora citas bibliográficas de autores en su texto original, por lo que esta presentación no atribuye conceptos de Psicología Comunitaria a teóricos específicos no mencionados en el documento fuente.</p>
+      </div>
+      <div class="refs-block reveal" style="--d:3">
+        <h3>Institución</h3>
+        <p>Universidad Católica Luis Amigó &mdash; Facultad de Ciencias Sociales, Salud y Bienestar &mdash; Programa de Psicología &mdash; Curso Psicología Comunitaria &mdash; Profesor Jorge Luis Muñoz.</p>
+      </div>
+      <div class="refs-block reveal" style="--d:4">
+        <h3>Equipo</h3>
+        <p>Carolina López López &middot; Sofía Vásquez &middot; Salome Rendón &middot; Manuela Chavarría Pérez &middot; María Paulina Castro Pérez.</p>
+      </div>
+    </div>
+    <div class="speaker-notes">Cierren agradeciendo al profesor y mencionando, si se pregunta, que las fuentes son las visitas de campo propias del grupo y no bibliografía externa.</div>
+  </section>
+
+</main>
+
+<div class="notes-panel" id="notesPanel" aria-hidden="true">
+  <div class="notes-panel-inner">
+    <span class="notes-panel-label">Notas del expositor</span>
+    <p id="notesText"></p>
+  </div>
+</div>
+
+<footer class="deck-nav">
+  <button class="nav-btn nav-btn--prev" id="prevBtn" aria-label="Diapositiva anterior">
+    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="dot-nav" id="dotNav"></div>
+  <button class="nav-btn nav-btn--next" id="nextBtn" aria-label="Diapositiva siguiente">
+    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
