@@ -280,7 +280,6 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
   width:100%;
 }
 .flow-node--start{ border-left:3px solid var(--teal); }
-.flow-node--end{ border-left:3px solid var(--terracotta); font-weight:600; }
 .flow-arrow{ width:1.5px; height:2.2rem; background:var(--line-strong); margin-left:1.2rem; position:relative; }
 .flow-arrow::after{
   content:''; position:absolute; bottom:-1px; left:50%; transform:translateX(-50%);
@@ -433,6 +432,23 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 .conclusion-num{ font-family:var(--font-display); font-size:1.4rem; color:var(--terracotta); display:block; margin-bottom:.5rem; }
 .conclusion-card p{ font-size:.92rem; margin:0; max-width:none; }
 
+/* ---------- Closing slide ---------- */
+.slide--closing{ justify-content:center; }
+.closing-inner{ max-width:640px; margin:0 auto; text-align:center; }
+.closing-inner .eyebrow{ display:block; }
+.closing-ornament{ display:flex; gap:.5rem; justify-content:center; margin-bottom:1.1rem; }
+.closing-dot{
+  width:8px; height:8px; border-radius:50%; background:var(--c);
+  animation:closing-pulse 2.4s ease-in-out infinite;
+}
+.closing-dot:nth-child(2){ animation-delay:.3s; }
+.closing-dot:nth-child(3){ animation-delay:.6s; }
+@keyframes closing-pulse{
+  0%,100%{ transform:scale(1); opacity:.55; }
+  50%{ transform:scale(1.3); opacity:1; }
+}
+.closing-title{ font-size:clamp(3rem,8vw,6rem); margin-bottom:0; }
+
 /* ---------- Speaker notes panel ---------- */
 .speaker-notes{ display:none; }
 .notes-panel{
@@ -473,7 +489,7 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 @media (prefers-reduced-motion: reduce){
   .slide, .reveal, .compare-bar, .arrow-down, .map-pin-halo,
   .cover-network .net-lines line, .cover-network .net-nodes circle,
-  .ripple-plane, .ripple-ring, .card-3d, .flip-card-inner{
+  .ripple-plane, .ripple-ring, .closing-dot{
     transition:none !important; animation:none !important;
   }
 }
