@@ -198,27 +198,20 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 .cover-team li{ position:relative; padding-left:.9rem; }
 .cover-team li::before{ content:''; position:absolute; left:0; top:.5em; width:5px; height:5px; border-radius:50%; background:var(--terracotta); }
 
-/* ---------- Cover hero: connected community network ---------- */
-.cover-visual{ display:flex; align-items:center; justify-content:center; }
-.cover-network-hero{ width:min(340px, 90%); height:auto; }
-.chn-spokes line{ stroke-dasharray:7 9; animation:chn-flow 5s linear infinite; }
-.chn-ring line{ stroke-dasharray:5 7; animation:chn-flow-rev 7s linear infinite; opacity:.7; }
-@keyframes chn-flow{ 0%{ stroke-dashoffset:0; } 100%{ stroke-dashoffset:-64; } }
-@keyframes chn-flow-rev{ 0%{ stroke-dashoffset:0; } 100%{ stroke-dashoffset:48; } }
-.chn-center circle{ fill:var(--teal); }
-.chn-center text{ fill:var(--cream-ink); font-size:1rem; font-weight:600; text-anchor:middle; font-family:var(--font-body); }
-.chn-nodes circle{
-  stroke:var(--paper); stroke-width:2.5;
-  animation:chn-pulse 3.4s ease-in-out infinite;
-  transform-box:fill-box; transform-origin:center;
-}
-.chn-nodes circle:nth-child(3n+1){ fill:var(--terracotta); }
-.chn-nodes circle:nth-child(3n+2){ fill:var(--teal); animation-delay:.5s; }
-.chn-nodes circle:nth-child(3n){ fill:var(--gold); animation-delay:1s; }
-@keyframes chn-pulse{
-  0%,100%{ transform:scale(1); }
-  50%{ transform:scale(1.28); }
-}
+/* ---------- Cover hero: community gathered in a circle ---------- */
+.cover-visual{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; }
+.community-illustration{ width:min(340px, 92%); height:auto; }
+.illo-glow{ transform-origin:center; transform-box:fill-box; animation:illo-glow-pulse 4.5s ease-in-out infinite; }
+.illo-orbit{ transform-origin:200px 200px; animation:illo-spin 70s linear infinite; }
+.illo-figure{ transform-origin:center; transform-box:fill-box; animation:illo-breathe 3.2s ease-in-out infinite; animation-delay:calc(var(--i) * .22s); }
+.illo-head, .illo-body{ fill:var(--terracotta); }
+.illo-figures > g:nth-child(3n+2) .illo-head, .illo-figures > g:nth-child(3n+2) .illo-body{ fill:var(--teal); }
+.illo-figures > g:nth-child(3n) .illo-head, .illo-figures > g:nth-child(3n) .illo-body{ fill:var(--gold); }
+.illo-center-icon{ opacity:.75; }
+.illo-caption{ font-size:.82rem; font-style:italic; color:var(--ink-faint); text-align:center; max-width:26ch; }
+@keyframes illo-glow-pulse{ 0%,100%{ opacity:.7; transform:scale(1);} 50%{ opacity:1; transform:scale(1.08);} }
+@keyframes illo-spin{ to{ transform:rotate(360deg);} }
+@keyframes illo-breathe{ 0%,100%{ transform:scale(1); opacity:.92;} 50%{ transform:scale(1.14); opacity:1;} }
 
 .scroll-cue{
   position:absolute; bottom:6.5rem; left:50%; transform:translateX(-50%);
@@ -438,7 +431,7 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
   .slide, .reveal, .compare-bar, .arrow-down, .map-pin-halo,
-  .chn-spokes line, .chn-ring line, .chn-nodes circle, .card-3d, .flip-card-inner{
+  .illo-glow, .illo-orbit, .illo-figure, .card-3d, .flip-card-inner{
     transition:none !important; animation:none !important;
   }
 }
@@ -532,7 +525,7 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
   .cover-meta, .cover-team ul{ justify-content:center; }
   .cover-team{ margin:0 auto; padding-top:.6rem; font-size:.8rem; }
   .cover-visual{ order:-1; }
-  .cover-network-hero{ width:min(160px, 42%); }
+  .community-illustration{ width:min(200px, 55%); }
   .slide--cover{ padding-top:.5rem; padding-bottom:.5rem; }
   .cover-kicker{ margin-bottom:.2rem; }
   .cover-faculty{ margin-bottom:.6rem; }
@@ -543,7 +536,7 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 @media (max-width: 600px){
   .slide{ padding:calc(var(--header-h) + 1rem) 1.2rem calc(var(--nav-h) + 3rem); }
   .cover-title{ font-size:clamp(2rem,10vw,3rem); }
-  .cover-network-hero{ width:min(180px, 55%); }
+  .community-illustration{ width:min(180px, 50%); }
   h2{ font-size:clamp(1.5rem,6vw,2rem); }
   .index-text{ font-size:1.05rem; }
   .chrome-label{ display:none; }
