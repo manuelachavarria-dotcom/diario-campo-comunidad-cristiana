@@ -50,12 +50,7 @@
 
   <!-- 00 · PORTADA -->
   <section class="slide slide--cover" id="s0" data-title="Portada">
-    <div class="aurora-bg" aria-hidden="true">
-      <span class="aurora-blob aurora-blob--terracotta"></span>
-      <span class="aurora-blob aurora-blob--teal"></span>
-      <span class="aurora-blob aurora-blob--gold"></span>
-    </div>
-    <div class="cover-inner cover-inner--single">
+    <div class="cover-inner">
       <div class="cover-content">
         <p class="reveal cover-kicker" style="--d:0">Universidad Católica Luis Amigó</p>
         <p class="reveal cover-faculty" style="--d:1">Facultad de Ciencias Sociales, Salud y Bienestar &middot; Programa de Psicología</p>
@@ -75,6 +70,38 @@
             <li>María Paulina Castro Pérez</li>
           </ul>
         </div>
+      </div>
+      <div class="cover-visual reveal" style="--d:4">
+        <svg class="cover-network-hero" viewBox="0 0 420 420" role="img" aria-label="Red de nodos conectados, símbolo de las redes comunitarias">
+          <g class="chn-ring" fill="none" stroke="var(--line-strong)" stroke-width="1.2">
+            <line x1="210" y1="60" x2="340" y2="135"/>
+            <line x1="340" y1="135" x2="340" y2="285"/>
+            <line x1="340" y1="285" x2="210" y2="360"/>
+            <line x1="210" y1="360" x2="80" y2="285"/>
+            <line x1="80" y1="285" x2="80" y2="135"/>
+            <line x1="80" y1="135" x2="210" y2="60"/>
+          </g>
+          <g class="chn-spokes" fill="none" stroke="var(--line-strong)" stroke-width="1.4">
+            <line x1="210" y1="210" x2="210" y2="60"/>
+            <line x1="210" y1="210" x2="340" y2="135"/>
+            <line x1="210" y1="210" x2="340" y2="285"/>
+            <line x1="210" y1="210" x2="210" y2="360"/>
+            <line x1="210" y1="210" x2="80" y2="285"/>
+            <line x1="210" y1="210" x2="80" y2="135"/>
+          </g>
+          <g class="chn-center">
+            <circle cx="210" cy="210" r="44"/>
+            <text x="210" y="216">Comunidad</text>
+          </g>
+          <g class="chn-nodes">
+            <circle cx="210" cy="60" r="10"/>
+            <circle cx="340" cy="135" r="10"/>
+            <circle cx="340" cy="285" r="10"/>
+            <circle cx="210" cy="360" r="10"/>
+            <circle cx="80" cy="285" r="10"/>
+            <circle cx="80" cy="135" r="10"/>
+          </g>
+        </svg>
       </div>
     </div>
     <button class="scroll-cue reveal" data-goto="1" style="--d:6">Comenzar <span class="arrow-down">&#8595;</span></button>
@@ -370,12 +397,12 @@
             <text x="210" y="216">Iglesia</text>
           </g>
           <g class="net-endpoints">
-            <circle cx="210" cy="70" r="9"/>
-            <circle cx="350" cy="150" r="9"/>
-            <circle cx="350" cy="290" r="9"/>
-            <circle cx="210" cy="360" r="9"/>
-            <circle cx="70" cy="290" r="9"/>
-            <circle cx="70" cy="150" r="9"/>
+            <g class="net-endpoint"><circle cx="210" cy="70" r="9"/><text x="210" y="48" text-anchor="middle">JAC</text></g>
+            <g class="net-endpoint"><circle cx="350" cy="150" r="9"/><text x="366" y="146" text-anchor="start">Alcaldía</text></g>
+            <g class="net-endpoint"><circle cx="350" cy="290" r="9"/><text x="366" y="294" text-anchor="start">PAVIDA</text></g>
+            <g class="net-endpoint"><circle cx="210" cy="360" r="9"/><text x="210" y="388" text-anchor="middle">Familias</text></g>
+            <g class="net-endpoint"><circle cx="70" cy="290" r="9"/><text x="54" y="294" text-anchor="end">Niñez</text></g>
+            <g class="net-endpoint"><circle cx="70" cy="150" r="9"/><text x="54" y="146" text-anchor="end">Líderes</text></g>
           </g>
         </svg>
         <p class="diagram-hint">Toca un actor para ver su rol en la red.</p>
