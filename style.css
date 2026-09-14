@@ -181,6 +181,10 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
   color:var(--ink); padding:0; justify-content:center;
 }
 .cover-network{ position:absolute; inset:0; width:100%; height:100%; }
+.cover-text-veil{
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(105deg, var(--bg) 0%, var(--bg) 42%, rgba(250,246,239,0) 68%);
+}
 .cover-network .net-lines line{ stroke-dasharray:5 7; animation:net-flow 5s linear infinite; }
 .cover-network .net-nodes circle{
   animation:node-breathe 3.4s ease-in-out infinite;
@@ -213,9 +217,16 @@ h2{ font-size:clamp(1.7rem, 3.4vw, 2.75rem); line-height:1.15; margin-bottom:1.1
 /* ---------- Cover hero: expanding ripple (community impact) ---------- */
 .cover-visual{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.6rem; }
 .ripple-scene{
-  width:min(300px, 85%); aspect-ratio:1/1; perspective:900px;
+  position:relative; width:min(300px, 85%); aspect-ratio:1/1; perspective:900px;
   display:flex; align-items:center; justify-content:center;
 }
+.ripple-tendril{
+  position:absolute; top:50%; left:50%; width:78%; height:0;
+  border-top:1.2px dashed rgba(36,31,27,0.16);
+  transform-origin:0 0; z-index:-1;
+}
+.ripple-tendril--a{ transform:rotate(-159deg); }
+.ripple-tendril--b{ transform:rotate(18deg); width:60%; }
 .ripple-plane{
   position:relative; width:82%; height:82%; transform-style:preserve-3d;
   animation:plane-breathe 10s ease-in-out infinite;
